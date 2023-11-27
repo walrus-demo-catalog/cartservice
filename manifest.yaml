@@ -4,6 +4,7 @@ metadata:
   name: cartservice
   namespace: ${namespace}
 spec:
+  replicas: ${replicas}
   selector:
     matchLabels:
       app: cartservice
@@ -12,7 +13,6 @@ spec:
       labels:
         app: cartservice
     spec:
-      replicas: ${replicas}
       serviceAccountName: default
       terminationGracePeriodSeconds: 5
       securityContext:
